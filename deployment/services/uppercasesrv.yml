@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: uppercasesrv
+spec:
+  selector:
+    app: uppercasesrv
+  ports:
+  - port: 8080
+  type: NodePort

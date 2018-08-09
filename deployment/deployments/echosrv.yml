@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: echosrv
+spec:
+  selector:
+    matchLabels:
+      app: echosrv
+  template:
+    metadata:
+      labels:
+        app: echosrv
+    spec:
+      containers:
+      - name: echosrv
+        image: devweek/echosrv
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080

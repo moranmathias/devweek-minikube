@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uppercasesrv
+spec:
+  selector:
+    matchLabels:
+      app: uppercasesrv
+  template:
+    metadata:
+      labels:
+        app: uppercasesrv
+    spec:
+      containers:
+      - name: uppercasesrv
+        image: devweek/uppercasesrv
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        args:
+          - "-echo-addr=http://$(ECHOSRV_SERVICE_HOST):$(ECHOSRV_SERVICE_PORT)/"

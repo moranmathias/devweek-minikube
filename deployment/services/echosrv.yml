@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: echosrv
+spec:
+  selector:
+    app: echosrv
+  ports:
+  - port: 8080
+  type: NodePort
