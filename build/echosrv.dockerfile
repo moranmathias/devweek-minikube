@@ -1,6 +1,6 @@
 FROM  golang:alpine as builder
-COPY "." "$GOPATH/src/github.corp.globant.com/InternetOfThings/devweek"
-WORKDIR $GOPATH/src/github.corp.globant.com/InternetOfThings/devweek
+COPY "." "$GOPATH/src/github/moranmathias/devweek"
+WORKDIR $GOPATH/src/github.com/moranmathias/devweek
 #Build the binary
 RUN GOOS=linux GOARCH=amd64 go build -o /go/bin/app ./cmd/echosrv/main.go
 
