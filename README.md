@@ -8,7 +8,7 @@
 
 ## Setup
 
-- Run eval `$(minikube docker-env)` to build the docker images in minikube vm
+- Run `eval $(minikube docker-env)` to build the docker images in minikube vm
 - Build images:
 ```
 docker build --force-rm -t devweek/echosrv -f ./build/echosrv.dockerfile .
